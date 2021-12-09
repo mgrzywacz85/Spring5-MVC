@@ -3,7 +3,6 @@ INDEX VERSION 1.131+C:\Users\Marcin\eclipse-workspace\spring-mvc\.metadata\.plug
 3060991440.index
 3887696528.index
 2821096187.index
-1016860528.index
 1374464255.index
 622078829.index
 4155817646.index
