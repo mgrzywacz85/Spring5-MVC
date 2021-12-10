@@ -1,4 +1,4 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 
@@ -11,20 +11,34 @@
 
 <body>
 
-The student is confirmed: ${student.firstName} ${student.lastName}
-
-<hr>
-<br>
-
-Country ISO: ${student.selectedCountryKey }
-
-<hr>
-<br>
+	The student is confirmed: ${student.firstName} ${student.lastName}
 
 
-Country: ${student.selectedCountryValue}
+	<br>
+	<br> Country ISO: ${student.selectedCountryKey }
 
-<hr>
+
+	<br>
+	<br> Country: ${student.selectedCountryValue}
+
+
+	<br>
+	<br> Favorite language: ${student.favoriteLanguage}
+
+	<br>
+	<br> Operating Systems:
+	
+	<ul>
+		
+		<c:forEach var="temp" items="${student.operatingSystems}">
+		
+		<li> ${temp} </li>
+		
+		</c:forEach>
+		
+	</ul>
+
+
 </body>
 
 
