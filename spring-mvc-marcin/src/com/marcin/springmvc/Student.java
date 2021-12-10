@@ -1,12 +1,26 @@
 package com.marcin.springmvc;
 
+import java.util.LinkedHashMap;
+
 public class Student {
 
 	private String firstName;
 	private String lastName;
 	private String country;
+	
+	private LinkedHashMap<String, String> countryOptions;
+	
 
 	public Student() {
+		
+		//create list of options for country drop down: using ISO country code
+		
+	countryOptions = new LinkedHashMap<>();
+	
+	countryOptions.put("PL", "Poland");
+	countryOptions.put("FR", "France");
+	countryOptions.put("DE", "Germany");
+	countryOptions.put("IN", "India");
 
 	}
 
@@ -34,4 +48,16 @@ public class Student {
 		this.country = country;
 	}
 
+	public LinkedHashMap<String, String> getCountryOptions() {
+		return countryOptions;
+	}
+	
+	public String getSelectedCountryKey() {
+		   return country;
+		 }
+	
+	public String getSelectedCountryValue() {
+		   return countryOptions.get(country);
+		 }
+	
 }

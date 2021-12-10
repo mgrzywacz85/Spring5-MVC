@@ -13,10 +13,18 @@
 
 The student is confirmed: ${student.firstName} ${student.lastName}
 
+<hr>
 <br>
 
-Country: ${student.country}
+Country ISO: ${student.selectedCountryKey }
 
+<hr>
+<br>
+
+
+Country: ${student.selectedCountryValue}
+
+<hr>
 </body>
 
 
