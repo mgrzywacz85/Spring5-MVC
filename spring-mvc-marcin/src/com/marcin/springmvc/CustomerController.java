@@ -20,9 +20,10 @@ public class CustomerController {
 	//resolve white space validation issue
 	
 	@InitBinder
-	public void InitBinder(WebDataBinder dataBinder) {
+	public void initBinder(WebDataBinder dataBinder) {
 		
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+		
 		dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
 		
 	}
